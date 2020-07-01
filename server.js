@@ -23,7 +23,7 @@ app.get('/api/quotes', (req, res, next) => {
         let authorQuotes = [];
         for (let i = 0; i < quotes.length; i++) {
             if (quotes[i].person === author) {
-                let quote = quotes[i]
+                let quote = quotes[i];
                 authorQuotes.push(quote);
             }
         }
@@ -31,7 +31,7 @@ app.get('/api/quotes', (req, res, next) => {
     } else {
         let allQuotes = [];
         for (let i = 0; i < quotes.length; i++) {
-            let quote = quotes[i]
+            let quote = quotes[i];
             allQuotes.push(quote);
         }
         res.send({quotes: allQuotes});
